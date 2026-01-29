@@ -1,16 +1,38 @@
 import React from 'react';
+import { Typography } from '@mui/material';
 
 function Services() {
   return (
-    <div className="container mt-5">
-      <h2>Our Services</h2>
+    <div className="services-section">
+      <div className="container">
+        <Typography variant="h4" gutterBottom>
+          Our Services
+        </Typography>
 
-      <ul>
-        <li>Retail and wholesale sanitary products</li>
-        <li>Bulk supply for contractors</li>
-        <li>Expert plumbing guidance</li>
-        <li>Affordable pricing</li>
-      </ul>
+        <Typography color="text.secondary" sx={{ mb: 4 }}>
+          Reliable sanitary solutions trusted by customers and contractors
+        </Typography>
+
+        <div className="service-item">
+          <span className="service-dot"></span>
+          <span>Retail and wholesale sanitary products</span>
+        </div>
+
+        <div className="service-item">
+          <span className="service-dot"></span>
+          <span>Bulk supply for contractors</span>
+        </div>
+
+        <div className="service-item">
+          <span className="service-dot"></span>
+          <span>Expert plumbing guidance</span>
+        </div>
+
+        <div className="service-item">
+          <span className="service-dot"></span>
+          <span>Affordable pricing</span>
+        </div>
+      </div>
     </div>
   );
 }
