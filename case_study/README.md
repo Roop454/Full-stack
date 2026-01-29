@@ -1,7 +1,9 @@
-<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/74a51728-99ab-483d-883c-0aedbccf5043" />
-<img width="1919" height="860" alt="image" src="https://github.com/user-attachments/assets/9ee3c377-9b60-4544-a796-7fb6235b6227" />
-<img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/df13e9ed-da8d-439d-b591-0dbe3030a976" />
-<img width="1915" height="867" alt="image" src="https://github.com/user-attachments/assets/3e3acd2e-5987-4e51-89cd-b8a6d3554016" />
+<img width="1919" height="852" alt="image" src="https://github.com/user-attachments/assets/10a016c3-0604-4587-af96-a4da7a8b218c" />
+<img width="1919" height="861" alt="image" src="https://github.com/user-attachments/assets/bc5bd2e0-4c7f-41c1-a2d8-4952d6e7788a" />
+<img width="1911" height="866" alt="image" src="https://github.com/user-attachments/assets/6d824bc9-dbb2-4cdd-bea0-4ef71e30d43d" />
+<img width="1919" height="862" alt="image" src="https://github.com/user-attachments/assets/3ff15d5d-83c4-4273-8bda-80edb11809bc" />
+<img width="1919" height="839" alt="image" src="https://github.com/user-attachments/assets/d3eb9c38-e9eb-4351-a850-5bc89664f53a" />
+<img width="1914" height="868" alt="image" src="https://github.com/user-attachments/assets/7000be28-2cc4-4c77-bf64-22ea44f20446" />
 
 # Getting Started with Create React App
 
