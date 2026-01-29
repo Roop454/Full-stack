@@ -1,0 +1,152 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.brand-title span {
+  color: #00b4d8; /* accent color */
+  font-weight: 900;
+}
+
+.navbar {
+  padding: 18px 40px;
+}
+
+.brand-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #00b4d8;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.brand-title {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.brand-title:hover {
+  color: #00b4d8;
+  transform: scale(1.05);
+}
+
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero {
+  height: 50vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* App wrapper */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content grows to push footer down */
+.content {
+  flex: 1;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+}
