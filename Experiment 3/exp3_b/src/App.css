@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* GLOBAL BACKGROUND */
+body {
+  min-height: 100vh;
+  color: white;
+  background: radial-gradient(circle at top, #0a001a, #020012, #000);
+  background-size: 400% 400%;
+  animation: bgmove 20s ease infinite;
+}
+
+@keyframes bgmove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 60px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav a {
+  margin-right: 35px;
+  color: cyan;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: cyan;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* HOME */
+.home {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glow-title {
+  font-size: 90px;
+  text-shadow: 0 0 60px cyan;
+  animation: pulse 2.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { text-shadow: 0 0 30px cyan; }
+  to { text-shadow: 0 0 80px cyan; }
+}
+
+.subtitle {
+  font-size: 22px;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  padding: 80px;
+}
+
+.section-title {
+  font-size: 46px;
+  margin-bottom: 30px;
+  color: cyan;
+  text-shadow: 0 0 20px cyan;
+}
+
+.hero-section {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 300px;          /* Bigger circle */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 5%; /* Moves photo down */
+  border: 6px solid cyan;
+  box-shadow: 0 0 60px cyan;
+  animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+/* PROFESSIONAL ASPIRATIONS */
+.glass-section {
+  margin: 60px 0;
+  padding: 50px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 50px rgba(0,255,255,0.25);
+  transition: 0.4s;
+  text-align: center;
+}
+
+.glass-section:hover {
+  transform: scale(1.02);
+}
+
+.glass-section h2 {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.glass-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 420px);
+  gap: 35px;
+  justify-content: center;   /* THIS is the key line */
+  margin: 0 auto;
+}
+
+.project-card {
+  padding: 30px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 0 25px rgba(0,255,255,0.4);
+}
+
+.project-card:hover {
+  transform: rotateX(10deg) rotateY(10deg) scale(1.1);
+}
+
+/* DASHBOARD */
+.dashboard {
+  padding: 80px;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3–3 layout */
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.dash-card {
+  padding: 35px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #00f2fe, #246cab);
+  color: rgb(255, 255, 255);
+  min-height: 180px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.4);
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light sweep animation */
+.dash-card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.dash-card:hover::after {
+  top: 100%;
+  left: 100%;
+}
+
+.dash-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.dash-card p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.dash-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.8);
+}
+
+.fp-title {
+  text-align: center;
+  font-size: 50px;
+  color: cyan;
+  margin-bottom: 50px;
+  text-shadow: 0 0 25px cyan;
+}
+
+/* Grid */
+.fp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 380px);
+  gap: 50px;
+  justify-content: center;
+}
+
+/* Cards */
+.fp-card {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 25px;
+  color: white;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.3);
+  transition: 0.4s;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.fp-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 2px;
+  background: linear-gradient(45deg, cyan, pink, purple);
+
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+
+/* Hover effect */
+.fp-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.7);
+}
+
+.fp-card h3 {
+  color: cyan;
+  margin-bottom: 10px;
+}
+
+.fp-card h4 {
+  color: pink;
+  margin-bottom: 15px;
+}
+
+.fp-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* FORCE Featured Projects */
+
+.fp-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 40px;
+  justify-content: center;
+}
+
+.fp-card {
+  border: 2px solid cyan;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+.fp-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px cyan;
+}
+
+/* Center Featured Projects */
+.center-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Fancy Project Cards */
+.project-card2 {
+  background: rgba(255,255,255,0.08);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(15px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  transition: 0.4s;
+  
+}
+
+/* Glow border */
+.project-card2::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, cyan, rgb(41, 130, 169), rgb(5, 69, 82));
+  z-index: -1;
+}
+
+/* Hover effect */
+.project-card2:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 50px cyan;
+}
+
+/* Project images */
+.project-card2 img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.home-text {
+  font-size: 20px;
+  max-width: 700px;
+  margin-top: 25px;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s;
+  transition: 0.4s;
+}
+
+/* Hover interaction */
+.home-text:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px cyan;
+}
+
+/* Fade animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* NAVBAR MAIN */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+}
+
+/* LEFT */
+.nav-left a {
+  color: cyan;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* RIGHT CONTAINER */
+.nav-right {
+  display: flex;
+  gap: 40px;
+}
+
+/* RIGHT LINKS */
+.nav-right a {
+  color: cyan;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Hover Underline Animation */
+.nav-right a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: cyan;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
